@@ -1,6 +1,7 @@
 FROM golang
 MAINTAINER Katsuyuki Tateishi <kt@wheel.jp>
 
-ADD build.sh /root/build.sh
+VOLUME ["/go"]
+ADD build.sh /build.sh
 
-CMD ["/root/build.sh"]
+CMD ["/build.sh"]
