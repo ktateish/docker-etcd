@@ -22,9 +22,11 @@ do
 
 		# build binaries
 		git checkout --force upstream/$b
+		echo
 		echo "build binaries for $b started on $(date)"
 		./build
-		echo "done. build status: $?"
+		echo
+		echo "done on $(date). build status: $?"
 
 		# create commit with newly built binaries
 		git checkout -B alpine/$b alpine/${b}-init
